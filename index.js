@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// Anytime a new function is created, a new scope is also created. The scope determines what is and isn't accessible in the current execution context. Once a function is done running, the information inside is no longer available. However with a closure, the inner function exists inside and always has access to the contents of it's parent.
 
 
 
@@ -28,9 +28,9 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  for (let i = num - 1; i > 0; i--) { num += i; }
+  return num;
   }
  
 
