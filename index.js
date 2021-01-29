@@ -119,17 +119,23 @@ function add(a, b){
   return a + b;
   }
 
+// let add = (a, b) => a * b;
+
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
 function multiply(a, b){
   return a * b;
-  }
+}
+  
+// let multiply = (a, b) => a * b;
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(first, last){
-   return `Hello ${first} ${last}, nice to meet you!`
-  }
+   return `Hello ${first} ${last}, nice to meet`
+}
+  
+// let greeting = (first, last) => `Hello ${first} ${last}, nice to meet`;
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
