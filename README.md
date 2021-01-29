@@ -26,6 +26,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+The biggest difference between '.forEach' and '.map' is that forEach executes a given function directly on the elements of the array and does not return anything. .map on the otherhand returns a new array and does not actually change anything on the original array.
 
 2. Explain the difference between a callback and a higher order function.
 
