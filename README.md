@@ -30,11 +30,24 @@ The biggest difference between '.forEach' and '.map' is that forEach executes a 
 
 2. Explain the difference between a callback and a higher order function.
 
+A higher order function is any function which takes in a function as an argument. A callback is a function which is used as an argument to another function.
+
 3. What is closure?
+
+Closure is when one function is nested inside of another, creating a scenario where the inner function has access to the information in it's parent even after the parent function is finished running. This allows for private variables to be created that only an inner function can access.
 
 4. Describe the four rules of the 'this' keyword.
 
+    Rule 1 - The subject of the "this" keyword depends on the current execution context. If we're not inside of a function, the current scope is the global scope so "this" refers to the window. This is easier to understand when you think about the Document Object Model. If you think of the window as the main object of the program, "this" will refer to that object.
+    
+    Rule 2 - Adding on to the previous point, as soon as the scope changes, so does the meaning of "this". The principle of implicit binding tells us that "this" will refer to whatever object we're currently working in. Like standard Object notation, if a method is called then "this" will refer to the Object calling the method.
+    
+    Rule 3 - When using constructors, "this" will refer to the specific instance of the object function.
+    
+    Rule 4 - The last principle of the "this" keyword pertains the ability to explicitly bind the keyword. By using the .call and .apply methods we can specify what context "this" should be called in.
+
 5. Why do we need super() in an extended class?
+Super is the instruction to include all of the properties and methods of the parent class. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
