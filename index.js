@@ -30,7 +30,7 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  for (let i = num - 1; i > 0; i--) { num += i; }
+  for (let i = num - 1; i > 0; i--) { num += i; } // By using the decrement operator we can sum the range of n to 0
   return num;
   }
  
@@ -59,8 +59,8 @@ const zooAnimals = [
   */
 
   function animalNames(array){
-    let displayNames = [];
-    array.forEach(function (animal) {
+    let displayNames = []; //Initializing an empty array to push the new strings to
+    array.forEach(function (animal) { //the forEach function receives an anonymous function to be performed on every item of the array
       displayNames.push(`name: ${animal['animal_name']}, scientific: ${animal['scientific_name']}`)
     })
     return (displayNames);
@@ -73,7 +73,7 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(array){
-    return array.map(name => name['animal_name'].toLowerCase());
+    return array.map(name => name['animal_name'].toLowerCase()); // .map will return a new array that we alter using .toLowerCase
   }
   
   
@@ -83,7 +83,7 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(array){
-    return array.filter(function (pop) {
+    return array.filter(function (pop) { // .filter will scan each item of the array and return only items that meet our conditions
       return pop.population < 5;
     })
   }
