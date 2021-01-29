@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
@@ -184,10 +185,11 @@ CuboidMaker.prototype.volume = function(){return this.length * this.height * thi
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
-
-
-
-
+let cuboidTwo = new CuboidMaker({
+  length: 4,
+  width: 5,
+  height: 5
+});
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
@@ -197,10 +199,17 @@ CuboidMaker.prototype.volume = function(){return this.length * this.height * thi
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
-
+class CuboidMakerTwo {
+  constructor(cuboidTwo) {
+    this.length = cuboidTwo.length,
+      this.width = cuboidTwo.width,
+      this.height = cuboidTwo.height
+  }
+  volume() { return this.length * this.height * this.width }
+  surfaceArea() {
+    return 2 * (this.length * this.height + this.length * this.width + this.width * this.height);
+  }
 }
-
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
@@ -212,7 +221,17 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
+class CubeMaker extends CuboidMaker {
+  constructor(object) {
+    super(object)
+  }
+  cubeVolume() {
+    return (this.height * this.width) ^ 3;
+  }
+  cubeSurfaceArea() {
+    return 6 * (this.height * this.width) ^ 2;
+  }
+}
 
 
 
